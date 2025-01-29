@@ -10,23 +10,18 @@ This repository contains a proof of concept (POC) for a Chatbot SDK that can be 
 
 ## Running the Demo Applications
 
-### Vanilla HTML
-
-To integrate the SDK into a vanilla HTML website, include the SDK script in your HTML file and initialize it:
-
-html:demo/index.html
 ### Local Development Setup for React and Nextjs
 
 1. Build the SDK package:
    ```bash
-   cd packages/sdk
+   cd chatbotSDK
    npm install
    npm run build
    npm pack
    ```
    This will create a file like `chatbot-sdk-1.0.0.tgz`
 
-2. Install in your project:
+2. Inside your Next/React project Install:
    ```bash
    # From your project directory
    npm install ../path/to/chatbot-sdk-1.0.0.tgz
@@ -44,6 +39,12 @@ html:demo/index.html
     npm install
     npm run dev
     ```
+
+### Vanilla HTML
+
+To integrate the SDK into a vanilla HTML website, After building the SDK, you'll find a UMD (Universal Module Definition) bundle in the dist folder, typically something like chatbot-sdk.umd.js. This UMD format allows the SDK to be used directly in browsers via a script tag.
+
+html:demo/index.html
 
 ### Production Usage
 Once published to npm, clients can install directly:
